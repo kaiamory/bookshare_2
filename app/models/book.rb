@@ -10,6 +10,10 @@ class Book < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :user_readers,
+             :through => :reviews,
+             :source => :user
+
   has_many   :users,
              :through => :reviews,
              :source => :user

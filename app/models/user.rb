@@ -9,6 +9,10 @@ class User < ApplicationRecord
 
   # Indirect associations
 
+  has_many   :books_titles,
+             :through => :reviews,
+             :source => :book
+
   has_many   :books,
              :through => :reviews,
              :source => :book

@@ -12,6 +12,8 @@ RSpec.describe Book, type: :model do
 
     describe "InDirect Associations" do
 
+    it { should have_many(:user_readers) }
+
     it { should have_many(:users) }
 
     end
