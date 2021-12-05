@@ -1,0 +1,12 @@
+<!-- Form recommendation start -->
+<%= form_with(model: @recommendation, local: true) do |f| %>
+<!-- Form recommendation end -->
+
+  <!-- Label and input for user_id start -->
+  <!-- Input for user_id start -->
+  <%= f.hidden_field :user_id, value: @user.id %>
+  <!-- Input for user_id end -->
+  <!-- Label and input for user_id end -->
+
+  <%= f.submit "Create recommendation", class: "btn btn-block btn-outline-secondary" %>
+<% end %>
