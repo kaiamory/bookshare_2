@@ -2,21 +2,21 @@ class Book < ApplicationRecord
   # Direct associations
 
   has_many   :reviews,
-             :dependent => :destroy
+             dependent: :destroy
 
   has_many   :author_writers,
-             :class_name => "Author",
-             :dependent => :destroy
+             class_name: "Author",
+             dependent: :destroy
 
   # Indirect associations
 
   has_many   :user_readers,
-             :through => :reviews,
-             :source => :user
+             through: :reviews,
+             source: :user
 
   has_many   :users,
-             :through => :reviews,
-             :source => :user
+             through: :reviews,
+             source: :user
 
   # Validations
 
@@ -25,5 +25,4 @@ class Book < ApplicationRecord
   def to_s
     name
   end
-
 end

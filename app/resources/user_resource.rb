@@ -18,5 +18,4 @@ class UserResource < ApplicationResource
                resource: BookResource
 
   many_to_many :books
-
 end
