@@ -14,6 +14,9 @@ class UserResource < ApplicationResource
 
   # Indirect associations
 
+  many_to_many :books_titles,
+               resource: BookResource
+
   many_to_many :books
 
 end
